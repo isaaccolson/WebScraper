@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "StartScraper";
+}
+
+<h1>Start Scraper</h1>
+
+<p>
+    @{ 
+        var DisplayMessage = "Scraping data from MSN Finance.";
+        
+    }
+    @DisplayMessage
+
+</p>
+
+<script>
+    @{ 
+        var seleniumScraper = new SeleniumScraper("<MsnUserEmail>","<password>");
+        seleniumScraper.Run();
+    }
+</script>
